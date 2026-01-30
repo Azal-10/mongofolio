@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Portfolio professionnel de Data Analyst inspiré par un design minimaliste et impactant.">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <a href="https://www.linkedin.com/in/luis-junior-mongo-mongo-b199b4204" target="_blank"
+                    class="nav-link">linkedin</a>
+            </div>
+            <div class="nav-center">
+                <h1 class="logo">Mongo Mongo Luis Junior</h1>
+            </div>
+            <div class="nav-right">
+                <a href="profil.html" class="nav-link">profil</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h2 class="hero-title">Bonjour, je suis un <span class="highlight">analyste de données</span> passionné.
+                </h2>
+                <p class="hero-subtitle">Découvrez mon expertise à travers mon CV, mes projets et mes articles.</p>
+                <div class="hero-btns">
+                    <a href="assets/mon cv.pdf" target="_blank" class="btn btn-outline">Mon CV</a>
+                    <a href="projets.html" class="btn btn-outline">Projets</a>
+                    <a href="blog.html" class="btn btn-outline">Blog</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="skills container">
+            <h3 class="section-title">Mes compétences</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                            <path d="M22 12A10 10 0 0 0 12 2v10z" />
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">Outils BI</h4>
+                    <p class="skill-text">Expertise sur Power BI et Tableau pour la création de visualisations
+                        interactives et aide à la décision.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M12 12V2" />
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">Langage SQL & DAX</h4>
+                    <p class="skill-text">Extraction de données complexes via SQL et modélisation avancée avec DAX pour
+                        des calculs précis.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h4 class="skill-name">Big Data & ETL</h4>
+                    <p class="skill-text">Processus ETL complets et gestion de systèmes d'information massifs (Master 1
+                        Big Data).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; 2026 Mongo Mongo Luis Junior. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Simple animations on appearance
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-card, .hero-content, .hero-image-container').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
