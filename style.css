@@ -141,6 +141,16 @@ nav {
     transform: scale(1.03);
 }
 
+/* Profile Section */
+.profile-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+}
+
 /* Skills Section */
 .skills {
     padding-bottom: 8rem;
